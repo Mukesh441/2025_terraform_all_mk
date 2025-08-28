@@ -1,0 +1,80 @@
+Acquiring state lock. This may take a few moments...
+module.ec2_public.data.aws_partition.current: Reading...
+data.aws_ami.amzlinux2: Reading...
+module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0e324e8debeb93925]
+module.ec2_public.data.aws_partition.current: Read complete after 0s [id=aws]
+data.aws_ami.amzlinux2: Read complete after 3s [id=ami-0e95a5e2743ec9ec9]
+module.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-08fdfc1b98a20cad4]
+module.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-08744faf269e98f9b]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0eb57ea2905213cb7]
+module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-00d1b07a1530960b1]
+module.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-0ee6b22198c648da8]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-0b8ffa00480cda2da]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-04e7cf9492cd42c4d]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0c9e7f849b657e43e]
+module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-03428d5d23e2733ca]
+module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-05bf73217e26502f0]
+module.vpc.aws_route_table.database[0]: Refreshing state... [id=rtb-0f30d6a0ae0733a72]
+module.private_sg.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-004831a0a97b04d73]
+module.vpc.aws_subnet.database[1]: Refreshing state... [id=subnet-079429476386dfe55]
+module.vpc.aws_subnet.database[0]: Refreshing state... [id=subnet-0a184f9e4917b857f]
+module.public_bastion_sg.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-045700c7e27761559]
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-0c0535f313be0fed7]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-077d4334e5113e079]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-05f7852046811819a]
+module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-03428d5d23e2733ca1080289494]
+module.ec2_public.data.aws_subnet.this[0]: Reading...
+module.private_sg.aws_security_group_rule.ingress_rules[1]: Refreshing state... [id=sgrule-3811085156]
+module.private_sg.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-1866484314]
+module.private_sg.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-2721466661]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-04c847bd2b0335846]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0fdae572a15b7b756]
+module.vpc.aws_route_table_association.database[1]: Refreshing state... [id=rtbassoc-0c5acebb4232c5729]
+module.vpc.aws_db_subnet_group.database[0]: Refreshing state... [id=hr-stag-myvpc]
+module.vpc.aws_route_table_association.database[0]: Refreshing state... [id=rtbassoc-0209d855279c499f2]
+module.ec2_public.data.aws_subnet.this[0]: Read complete after 0s [id=subnet-04e7cf9492cd42c4d]
+module.ec2_public.aws_security_group.this[0]: Refreshing state... [id=sg-0baa7fd2d81e12446]
+module.public_bastion_sg.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-745883209]
+module.public_bastion_sg.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-1829228694]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-0dca79304c2e4f70a]
+module.ec2_public.aws_vpc_security_group_egress_rule.this["ipv6_default"]: Refreshing state... [id=sgr-0fa7e17e04de01110]
+module.ec2_public.aws_vpc_security_group_egress_rule.this["ipv4_default"]: Refreshing state... [id=sgr-00c6413ca5892e60c]
+module.ec2_public.aws_instance.this[0]: Refreshing state... [id=i-07610e116eef43249]
+module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-05bf73217e26502f01080289494]
+module.ec2_private["0"].data.aws_partition.current: Reading...
+module.ec2_private["1"].data.aws_partition.current: Reading...
+module.ec2_private["0"].data.aws_partition.current: Read complete after 0s [id=aws]
+module.ec2_private["1"].data.aws_partition.current: Read complete after 0s [id=aws]
+module.ec2_private["1"].data.aws_subnet.this[0]: Reading...
+module.ec2_private["0"].data.aws_subnet.this[0]: Reading...
+module.ec2_private["0"].data.aws_subnet.this[0]: Read complete after 0s [id=subnet-0b8ffa00480cda2da]
+module.ec2_private["1"].data.aws_subnet.this[0]: Read complete after 0s [id=subnet-0c9e7f849b657e43e]
+module.ec2_private["1"].aws_security_group.this[0]: Refreshing state... [id=sg-07461a8e1cc2728d0]
+module.ec2_private["0"].aws_security_group.this[0]: Refreshing state... [id=sg-03fb0ed5726d59c6c]
+module.ec2_private["0"].aws_vpc_security_group_egress_rule.this["ipv4_default"]: Refreshing state... [id=sgr-0939db18a5cc25833]
+module.ec2_private["1"].aws_vpc_security_group_egress_rule.this["ipv6_default"]: Refreshing state... [id=sgr-0e2f0149f67796bbe]
+module.ec2_private["1"].aws_vpc_security_group_egress_rule.this["ipv4_default"]: Refreshing state... [id=sgr-0e90409e0d4649c4f]
+module.ec2_private["0"].aws_vpc_security_group_egress_rule.this["ipv6_default"]: Refreshing state... [id=sgr-0cfa1352e036f338c]
+module.ec2_private["1"].aws_instance.this[0]: Refreshing state... [id=i-08b2e9dd83b27080f]
+module.ec2_private["0"].aws_instance.this[0]: Refreshing state... [id=i-00dc78dc72102bed7]
+aws_eip.bastion_eip: Refreshing state... [id=eipalloc-0631c94ca1c4c7261]
+null_resource.name: Refreshing state... [id=6167091156795942789]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # null_resource.name is tainted, so must be replaced
+-/+ resource "null_resource" "name" {
+      ~ id = "6167091156795942789" -> (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 1 to destroy.
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
+Releasing state lock. This may take a few moments...

@@ -32,9 +32,12 @@ jobs:
 
     - name: 'Terraform Init'
       run: terraform init
+      working-directory: ./terraform-manifests
 
     - name: 'Terraform Plan Destroy'
       run: terraform plan -destroy -out=tfplan-destroy
+      working-directory: ./terraform-manifests
 
     - name: 'Terraform Apply Destroy'
       run: terraform apply -auto-approve tfplan-destroy
+      working-directory: ./terraform-manifests
