@@ -7,18 +7,18 @@ resource "null_resource" "name" {
     host     = aws_eip.bastion_eip.public_ip    
     user     = "ec2-user"
     password = ""
-    private_key = file("private-key/terraform-key.pem")
+    private_key = file("private-key/us_virginia_key.pem")
   }  
 
-## File Provisioner: Copies the terraform-key.pem file to /tmp/terraform-key.pem
+## File Provisioner: Copies the us_virginia_key.pem file to /tmp/us_virginia_key.pem
   provisioner "file" {
-    source      = "private-key/terraform-key.pem"
-    destination = "/tmp/terraform-key.pem"
+    source      = "private-key/us_virginia_key.pem"
+    destination = "/tmp/us_virginia_key.pem"
   }
 ## Remote Exec Provisioner: Using remote-exec provisioner fix the private key permissions on Bastion Host
   provisioner "remote-exec" {
     inline = [
-      "sudo chmod 400 /tmp/terraform-key.pem"
+      "sudo chmod 400 /tmp/us_virginia_key.pem"
     ]
   }
 ## Local Exec Provisioner:  local-exec provisioner (Creation-Time Provisioner - Triggered during Create Resource)
