@@ -1,0 +1,6 @@
+private_key/
+.terraform*
+tfplan
+tfplan-*
+terraform.tfstate
+terraform.tfstate.backup
