@@ -1,0 +1,682 @@
+Acquiring state lock. This may take a few moments...
+module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-03c7ccda2c2cd7954]
+module.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-0ec6daedc6efdf62c]
+module.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-0f60cee1500a6bf40]
+module.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-0cff5dc4cfc87a213]
+module.vpc.aws_subnet.database[1]: Refreshing state... [id=subnet-0303fc03f646567ee]
+module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-0dc2d583ec508f81a]
+module.vpc.aws_route_table.database[0]: Refreshing state... [id=rtb-0bcee0649098d5df9]
+module.vpc.aws_subnet.database[0]: Refreshing state... [id=subnet-02d431a95ae6178fe]
+module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-00ed634780b75a4e3]
+module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-0b8104a6cea83c16d]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-092581df571cb3bd0]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0d34a20ec8e22ddd7]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-0c4a95d5a0880bf6f]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-060e58fabfee34cb2]
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-03a7c016cbca5a863]
+module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-00ed634780b75a4e31080289494]
+module.vpc.aws_route_table_association.database[1]: Refreshing state... [id=rtbassoc-03bc783ad1d9a97f1]
+module.vpc.aws_route_table_association.database[0]: Refreshing state... [id=rtbassoc-053159f2dab509ab5]
+module.vpc.aws_db_subnet_group.database[0]: Refreshing state... [id=hr-stag-myvpc]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-0267a3955a8d1ea72]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0bcbc6286b37129d3]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0d59481bdf2dfd30d]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0265d9cbdec56e49d]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-0ae4c275a8a1b0df5]
+module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-0dc2d583ec508f81a1080289494]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # module.vpc.aws_db_subnet_group.database[0] will be destroyed
+  - resource "aws_db_subnet_group" "database" {
+      - arn                     = "arn:aws:rds:us-east-1:683627574821:subgrp:hr-stag-myvpc" -> null
+      - description             = "Database subnet group for HR-stag-myvpc" -> null
+      - id                      = "hr-stag-myvpc" -> null
+      - name                    = "hr-stag-myvpc" -> null
+      - region                  = "us-east-1" -> null
+      - subnet_ids              = [
+          - "subnet-02d431a95ae6178fe",
+          - "subnet-0303fc03f646567ee",
+        ] -> null
+      - supported_network_types = [
+          - "IPV4",
+        ] -> null
+      - tags                    = {
+          - "Name"        = "hr-stag-myvpc"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all                = {
+          - "Name"        = "hr-stag-myvpc"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id                  = "vpc-03c7ccda2c2cd7954" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_default_network_acl.this[0] will be destroyed
+  - resource "aws_default_network_acl" "this" {
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:network-acl/acl-0cff5dc4cfc87a213" -> null
+      - default_network_acl_id = "acl-0cff5dc4cfc87a213" -> null
+      - id                     = "acl-0cff5dc4cfc87a213" -> null
+      - owner_id               = "683627574821" -> null
+      - region                 = "us-east-1" -> null
+      - subnet_ids             = [
+          - "subnet-02d431a95ae6178fe",
+          - "subnet-0303fc03f646567ee",
+          - "subnet-060e58fabfee34cb2",
+          - "subnet-092581df571cb3bd0",
+          - "subnet-0c4a95d5a0880bf6f",
+          - "subnet-0d34a20ec8e22ddd7",
+        ] -> null
+      - tags                   = {
+          - "Name"        = "HR-stag-myvpc-default"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all               = {
+          - "Name"        = "HR-stag-myvpc-default"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id                 = "vpc-03c7ccda2c2cd7954" -> null
+
+      - egress {
+          - action          = "allow" -> null
+          - from_port       = 0 -> null
+          - icmp_code       = 0 -> null
+          - icmp_type       = 0 -> null
+          - ipv6_cidr_block = "::/0" -> null
+          - protocol        = "-1" -> null
+          - rule_no         = 101 -> null
+          - to_port         = 0 -> null
+            # (1 unchanged attribute hidden)
+        }
+      - egress {
+          - action          = "allow" -> null
+          - cidr_block      = "0.0.0.0/0" -> null
+          - from_port       = 0 -> null
+          - icmp_code       = 0 -> null
+          - icmp_type       = 0 -> null
+          - protocol        = "-1" -> null
+          - rule_no         = 100 -> null
+          - to_port         = 0 -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - ingress {
+          - action          = "allow" -> null
+          - from_port       = 0 -> null
+          - icmp_code       = 0 -> null
+          - icmp_type       = 0 -> null
+          - ipv6_cidr_block = "::/0" -> null
+          - protocol        = "-1" -> null
+          - rule_no         = 101 -> null
+          - to_port         = 0 -> null
+            # (1 unchanged attribute hidden)
+        }
+      - ingress {
+          - action          = "allow" -> null
+          - cidr_block      = "0.0.0.0/0" -> null
+          - from_port       = 0 -> null
+          - icmp_code       = 0 -> null
+          - icmp_type       = 0 -> null
+          - protocol        = "-1" -> null
+          - rule_no         = 100 -> null
+          - to_port         = 0 -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # module.vpc.aws_default_route_table.default[0] will be destroyed
+  - resource "aws_default_route_table" "default" {
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:route-table/rtb-0f60cee1500a6bf40" -> null
+      - default_route_table_id = "rtb-0f60cee1500a6bf40" -> null
+      - id                     = "rtb-0f60cee1500a6bf40" -> null
+      - owner_id               = "683627574821" -> null
+      - propagating_vgws       = [] -> null
+      - region                 = "us-east-1" -> null
+      - route                  = [] -> null
+      - tags                   = {
+          - "Name"        = "HR-stag-myvpc-default"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all               = {
+          - "Name"        = "HR-stag-myvpc-default"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id                 = "vpc-03c7ccda2c2cd7954" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+          - update = "5m" -> null
+        }
+    }
+
+  # module.vpc.aws_default_security_group.this[0] will be destroyed
+  - resource "aws_default_security_group" "this" {
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-0ec6daedc6efdf62c" -> null
+      - description            = "default VPC security group" -> null
+      - egress                 = [] -> null
+      - id                     = "sg-0ec6daedc6efdf62c" -> null
+      - ingress                = [] -> null
+      - name                   = "default" -> null
+      - owner_id               = "683627574821" -> null
+      - region                 = "us-east-1" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name"        = "HR-stag-myvpc-default"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all               = {
+          - "Name"        = "HR-stag-myvpc-default"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id                 = "vpc-03c7ccda2c2cd7954" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_eip.nat[0] will be destroyed
+  - resource "aws_eip" "nat" {
+      - allocation_id            = "eipalloc-03a7c016cbca5a863" -> null
+      - arn                      = "arn:aws:ec2:us-east-1:683627574821:elastic-ip/eipalloc-03a7c016cbca5a863" -> null
+      - association_id           = "eipassoc-08c2c4fcd184f5185" -> null
+      - domain                   = "vpc" -> null
+      - id                       = "eipalloc-03a7c016cbca5a863" -> null
+      - network_border_group     = "us-east-1" -> null
+      - network_interface        = "eni-0e49cdc18bb81da78" -> null
+      - private_dns              = "ip-10-0-101-180.ec2.internal" -> null
+      - private_ip               = "10.0.101.180" -> null
+      - public_dns               = "ec2-34-197-2-183.compute-1.amazonaws.com" -> null
+      - public_ip                = "34.197.2.183" -> null
+      - public_ipv4_pool         = "amazon" -> null
+      - region                   = "us-east-1" -> null
+      - tags                     = {
+          - "Name"        = "HR-stag-myvpc-us-east-1c"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all                 = {
+          - "Name"        = "HR-stag-myvpc-us-east-1c"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+        # (5 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_internet_gateway.this[0] will be destroyed
+  - resource "aws_internet_gateway" "this" {
+      - arn      = "arn:aws:ec2:us-east-1:683627574821:internet-gateway/igw-0b8104a6cea83c16d" -> null
+      - id       = "igw-0b8104a6cea83c16d" -> null
+      - owner_id = "683627574821" -> null
+      - region   = "us-east-1" -> null
+      - tags     = {
+          - "Name"        = "HR-stag-myvpc"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all = {
+          - "Name"        = "HR-stag-myvpc"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id   = "vpc-03c7ccda2c2cd7954" -> null
+    }
+
+  # module.vpc.aws_nat_gateway.this[0] will be destroyed
+  - resource "aws_nat_gateway" "this" {
+      - allocation_id                      = "eipalloc-03a7c016cbca5a863" -> null
+      - association_id                     = "eipassoc-08c2c4fcd184f5185" -> null
+      - connectivity_type                  = "public" -> null
+      - id                                 = "nat-0ae4c275a8a1b0df5" -> null
+      - network_interface_id               = "eni-0e49cdc18bb81da78" -> null
+      - private_ip                         = "10.0.101.180" -> null
+      - public_ip                          = "34.197.2.183" -> null
+      - region                             = "us-east-1" -> null
+      - secondary_allocation_ids           = [] -> null
+      - secondary_private_ip_address_count = 0 -> null
+      - secondary_private_ip_addresses     = [] -> null
+      - subnet_id                          = "subnet-092581df571cb3bd0" -> null
+      - tags                               = {
+          - "Name"        = "HR-stag-myvpc-us-east-1c"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all                           = {
+          - "Name"        = "HR-stag-myvpc-us-east-1c"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+    }
+
+  # module.vpc.aws_route.private_nat_gateway[0] will be destroyed
+  - resource "aws_route" "private_nat_gateway" {
+      - destination_cidr_block      = "0.0.0.0/0" -> null
+      - id                          = "r-rtb-0dc2d583ec508f81a1080289494" -> null
+      - nat_gateway_id              = "nat-0ae4c275a8a1b0df5" -> null
+      - origin                      = "CreateRoute" -> null
+      - region                      = "us-east-1" -> null
+      - route_table_id              = "rtb-0dc2d583ec508f81a" -> null
+      - state                       = "active" -> null
+        # (13 unchanged attributes hidden)
+
+      - timeouts {
+          - create = "5m" -> null
+        }
+    }
+
+  # module.vpc.aws_route.public_internet_gateway[0] will be destroyed
+  - resource "aws_route" "public_internet_gateway" {
+      - destination_cidr_block      = "0.0.0.0/0" -> null
+      - gateway_id                  = "igw-0b8104a6cea83c16d" -> null
+      - id                          = "r-rtb-00ed634780b75a4e31080289494" -> null
+      - origin                      = "CreateRoute" -> null
+      - region                      = "us-east-1" -> null
+      - route_table_id              = "rtb-00ed634780b75a4e3" -> null
+      - state                       = "active" -> null
+        # (13 unchanged attributes hidden)
+
+      - timeouts {
+          - create = "5m" -> null
+        }
+    }
+
+  # module.vpc.aws_route_table.database[0] will be destroyed
+  - resource "aws_route_table" "database" {
+      - arn              = "arn:aws:ec2:us-east-1:683627574821:route-table/rtb-0bcee0649098d5df9" -> null
+      - id               = "rtb-0bcee0649098d5df9" -> null
+      - owner_id         = "683627574821" -> null
+      - propagating_vgws = [] -> null
+      - region           = "us-east-1" -> null
+      - route            = [] -> null
+      - tags             = {
+          - "Name"        = "HR-stag-myvpc-db"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all         = {
+          - "Name"        = "HR-stag-myvpc-db"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id           = "vpc-03c7ccda2c2cd7954" -> null
+    }
+
+  # module.vpc.aws_route_table.private[0] will be destroyed
+  - resource "aws_route_table" "private" {
+      - arn              = "arn:aws:ec2:us-east-1:683627574821:route-table/rtb-0dc2d583ec508f81a" -> null
+      - id               = "rtb-0dc2d583ec508f81a" -> null
+      - owner_id         = "683627574821" -> null
+      - propagating_vgws = [] -> null
+      - region           = "us-east-1" -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - nat_gateway_id             = "nat-0ae4c275a8a1b0df5"
+                # (11 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {
+          - "Name"        = "HR-stag-myvpc-private"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all         = {
+          - "Name"        = "HR-stag-myvpc-private"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id           = "vpc-03c7ccda2c2cd7954" -> null
+    }
+
+  # module.vpc.aws_route_table.public[0] will be destroyed
+  - resource "aws_route_table" "public" {
+      - arn              = "arn:aws:ec2:us-east-1:683627574821:route-table/rtb-00ed634780b75a4e3" -> null
+      - id               = "rtb-00ed634780b75a4e3" -> null
+      - owner_id         = "683627574821" -> null
+      - propagating_vgws = [] -> null
+      - region           = "us-east-1" -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - gateway_id                 = "igw-0b8104a6cea83c16d"
+                # (11 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {
+          - "Name"        = "HR-stag-myvpc-public"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all         = {
+          - "Name"        = "HR-stag-myvpc-public"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id           = "vpc-03c7ccda2c2cd7954" -> null
+    }
+
+  # module.vpc.aws_route_table_association.database[0] will be destroyed
+  - resource "aws_route_table_association" "database" {
+      - id             = "rtbassoc-053159f2dab509ab5" -> null
+      - region         = "us-east-1" -> null
+      - route_table_id = "rtb-0bcee0649098d5df9" -> null
+      - subnet_id      = "subnet-02d431a95ae6178fe" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_route_table_association.database[1] will be destroyed
+  - resource "aws_route_table_association" "database" {
+      - id             = "rtbassoc-03bc783ad1d9a97f1" -> null
+      - region         = "us-east-1" -> null
+      - route_table_id = "rtb-0bcee0649098d5df9" -> null
+      - subnet_id      = "subnet-0303fc03f646567ee" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_route_table_association.private[0] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-0265d9cbdec56e49d" -> null
+      - region         = "us-east-1" -> null
+      - route_table_id = "rtb-0dc2d583ec508f81a" -> null
+      - subnet_id      = "subnet-0c4a95d5a0880bf6f" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_route_table_association.private[1] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-0d59481bdf2dfd30d" -> null
+      - region         = "us-east-1" -> null
+      - route_table_id = "rtb-0dc2d583ec508f81a" -> null
+      - subnet_id      = "subnet-060e58fabfee34cb2" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_route_table_association.public[0] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-0bcbc6286b37129d3" -> null
+      - region         = "us-east-1" -> null
+      - route_table_id = "rtb-00ed634780b75a4e3" -> null
+      - subnet_id      = "subnet-092581df571cb3bd0" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_route_table_association.public[1] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-0267a3955a8d1ea72" -> null
+      - region         = "us-east-1" -> null
+      - route_table_id = "rtb-00ed634780b75a4e3" -> null
+      - subnet_id      = "subnet-0d34a20ec8e22ddd7" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_subnet.database[0] will be destroyed
+  - resource "aws_subnet" "database" {
+      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-02d431a95ae6178fe" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1c" -> null
+      - availability_zone_id                           = "use1-az1" -> null
+      - cidr_block                                     = "10.0.151.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-02d431a95ae6178fe" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "683627574821" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "us-east-1" -> null
+      - tags                                           = {
+          - "Name"        = "HR-stag-myvpc-db-us-east-1c"
+          - "Type"        = "Private Database Subnets"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all                                       = {
+          - "Name"        = "HR-stag-myvpc-db-us-east-1c"
+          - "Type"        = "Private Database Subnets"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id                                         = "vpc-03c7ccda2c2cd7954" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_subnet.database[1] will be destroyed
+  - resource "aws_subnet" "database" {
+      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-0303fc03f646567ee" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1d" -> null
+      - availability_zone_id                           = "use1-az2" -> null
+      - cidr_block                                     = "10.0.152.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0303fc03f646567ee" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "683627574821" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "us-east-1" -> null
+      - tags                                           = {
+          - "Name"        = "HR-stag-myvpc-db-us-east-1d"
+          - "Type"        = "Private Database Subnets"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all                                       = {
+          - "Name"        = "HR-stag-myvpc-db-us-east-1d"
+          - "Type"        = "Private Database Subnets"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id                                         = "vpc-03c7ccda2c2cd7954" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_subnet.private[0] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-0c4a95d5a0880bf6f" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1c" -> null
+      - availability_zone_id                           = "use1-az1" -> null
+      - cidr_block                                     = "10.0.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0c4a95d5a0880bf6f" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "683627574821" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "us-east-1" -> null
+      - tags                                           = {
+          - "Name"        = "HR-stag-myvpc-private-us-east-1c"
+          - "Type"        = "Private Subnets"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all                                       = {
+          - "Name"        = "HR-stag-myvpc-private-us-east-1c"
+          - "Type"        = "Private Subnets"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id                                         = "vpc-03c7ccda2c2cd7954" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_subnet.private[1] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-060e58fabfee34cb2" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1d" -> null
+      - availability_zone_id                           = "use1-az2" -> null
+      - cidr_block                                     = "10.0.2.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-060e58fabfee34cb2" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "683627574821" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "us-east-1" -> null
+      - tags                                           = {
+          - "Name"        = "HR-stag-myvpc-private-us-east-1d"
+          - "Type"        = "Private Subnets"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all                                       = {
+          - "Name"        = "HR-stag-myvpc-private-us-east-1d"
+          - "Type"        = "Private Subnets"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id                                         = "vpc-03c7ccda2c2cd7954" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_subnet.public[0] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-092581df571cb3bd0" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1c" -> null
+      - availability_zone_id                           = "use1-az1" -> null
+      - cidr_block                                     = "10.0.101.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-092581df571cb3bd0" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "683627574821" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "us-east-1" -> null
+      - tags                                           = {
+          - "Name"        = "HR-stag-myvpc-public-us-east-1c"
+          - "Type"        = "Public Subnets"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all                                       = {
+          - "Name"        = "HR-stag-myvpc-public-us-east-1c"
+          - "Type"        = "Public Subnets"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id                                         = "vpc-03c7ccda2c2cd7954" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_subnet.public[1] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-0d34a20ec8e22ddd7" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1d" -> null
+      - availability_zone_id                           = "use1-az2" -> null
+      - cidr_block                                     = "10.0.102.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0d34a20ec8e22ddd7" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "683627574821" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "us-east-1" -> null
+      - tags                                           = {
+          - "Name"        = "HR-stag-myvpc-public-us-east-1d"
+          - "Type"        = "Public Subnets"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all                                       = {
+          - "Name"        = "HR-stag-myvpc-public-us-east-1d"
+          - "Type"        = "Public Subnets"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id                                         = "vpc-03c7ccda2c2cd7954" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_vpc.this[0] will be destroyed
+  - resource "aws_vpc" "this" {
+      - arn                                  = "arn:aws:ec2:us-east-1:683627574821:vpc/vpc-03c7ccda2c2cd7954" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.0.0.0/16" -> null
+      - default_network_acl_id               = "acl-0cff5dc4cfc87a213" -> null
+      - default_route_table_id               = "rtb-0f60cee1500a6bf40" -> null
+      - default_security_group_id            = "sg-0ec6daedc6efdf62c" -> null
+      - dhcp_options_id                      = "dopt-04b04201693911d76" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-03c7ccda2c2cd7954" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-0f60cee1500a6bf40" -> null
+      - owner_id                             = "683627574821" -> null
+      - region                               = "us-east-1" -> null
+      - tags                                 = {
+          - "Name"        = "HR-stag-myvpc"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all                             = {
+          - "Name"        = "HR-stag-myvpc"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+        # (4 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 0 to change, 25 to destroy.
+
+Changes to Outputs:
+  - azs             = [
+      - "us-east-1c",
+      - "us-east-1d",
+    ] -> null
+  - nat_public_ips  = [
+      - "34.197.2.183",
+    ] -> null
+  - private_subnets = [
+      - "subnet-0c4a95d5a0880bf6f",
+      - "subnet-060e58fabfee34cb2",
+    ] -> null
+  - public_subnets  = [
+      - "subnet-092581df571cb3bd0",
+      - "subnet-0d34a20ec8e22ddd7",
+    ] -> null
+  - vpc_cidr_block  = "10.0.0.0/16" -> null
+  - vpc_id          = "vpc-03c7ccda2c2cd7954" -> null
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
+Releasing state lock. This may take a few moments...
