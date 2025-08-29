@@ -8,12 +8,16 @@ terraform {
     # use_lockfile = true  # For state locking with DynamoDB (optional but recommended)
     encrypt = true                        # Enable encryption of the state file
   }
-  required_version = ">=  1.13.0"
+  required_version = ">= 1.6"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 6.0" # Optional but recommended in production
+      version = ">= 5.0" # Optional but recommended in production
     }
+    null = {
+      source = "hashicorp/null"
+      version = "~> 3.0"
+    } 
 
   }
 }
