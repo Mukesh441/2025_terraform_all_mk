@@ -1,64 +1,71 @@
 Acquiring state lock. This may take a few moments...
-data.aws_ami.amzlinux2: Reading...
 module.ec2_public.data.aws_partition.current: Reading...
-module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0e324e8debeb93925]
+data.aws_ami.amzlinux2: Reading...
+module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0c9934474e2d271f6]
 module.ec2_public.data.aws_partition.current: Read complete after 0s [id=aws]
-data.aws_ami.amzlinux2: Read complete after 2s [id=ami-0e95a5e2743ec9ec9]
-module.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-08744faf269e98f9b]
-module.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-08fdfc1b98a20cad4]
-module.public_bastion_sg.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-045700c7e27761559]
-module.vpc.aws_route_table.database[0]: Refreshing state... [id=rtb-0f30d6a0ae0733a72]
-module.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-0ee6b22198c648da8]
-module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-05bf73217e26502f0]
-module.vpc.aws_subnet.database[0]: Refreshing state... [id=subnet-0a184f9e4917b857f]
-module.vpc.aws_subnet.database[1]: Refreshing state... [id=subnet-079429476386dfe55]
-module.private_sg.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-004831a0a97b04d73]
-module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-04e7cf9492cd42c4d]
-module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0eb57ea2905213cb7]
-module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-0b8ffa00480cda2da]
-module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0c9e7f849b657e43e]
-module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-03428d5d23e2733ca]
-module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-00d1b07a1530960b1]
-module.public_bastion_sg.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-745883209]
-module.public_bastion_sg.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-1829228694]
-module.ec2_public.data.aws_subnet.this[0]: Reading...
-module.private_sg.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-1866484314]
-module.private_sg.aws_security_group_rule.ingress_rules[1]: Refreshing state... [id=sgrule-3811085156]
-module.private_sg.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-2721466661]
+data.aws_ami.amzlinux2: Read complete after 3s [id=ami-0e95a5e2743ec9ec9]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-02ca124c0a0d38668]
+module.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-0b97fd98fb9755c1a]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0ec58d193ab1c43d5]
+module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-0d3d7952f3ba2336d]
+module.vpc.aws_route_table.database[0]: Refreshing state... [id=rtb-0fa9bc8ace8dceff9]
+module.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-0db4216b5872a1a57]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0b685efe80c449b7e]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0555e4c27a39d69d6]
+module.loadbalancer_sg.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-0d34779acf68a15e0]
+module.vpc.aws_subnet.database[1]: Refreshing state... [id=subnet-094c88b5a67bba9e0]
+module.vpc.aws_subnet.database[0]: Refreshing state... [id=subnet-01f0a954963b71334]
+module.public_bastion_sg.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-0986a9094ad77c9ab]
+module.private_sg.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-0ffa1f1f8a76fb1fc]
+module.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-0630061c2c227224c]
+module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-07111b667d4c59923]
+module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-0a82e55000bc8bd56]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0feb1abbb1678860c]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-0683b5a68b37579e3]
 module.vpc.aws_db_subnet_group.database[0]: Refreshing state... [id=hr-stag-myvpc]
-module.vpc.aws_route_table_association.database[0]: Refreshing state... [id=rtbassoc-0209d855279c499f2]
-module.vpc.aws_route_table_association.database[1]: Refreshing state... [id=rtbassoc-0c5acebb4232c5729]
-module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-05f7852046811819a]
-module.ec2_public.data.aws_subnet.this[0]: Read complete after 1s [id=subnet-04e7cf9492cd42c4d]
-module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-077d4334e5113e079]
-module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-03428d5d23e2733ca1080289494]
-module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-0c0535f313be0fed7]
-module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-04c847bd2b0335846]
-module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0fdae572a15b7b756]
-module.ec2_public.aws_security_group.this[0]: Refreshing state... [id=sg-0baa7fd2d81e12446]
-module.ec2_public.aws_vpc_security_group_egress_rule.this["ipv4_default"]: Refreshing state... [id=sgr-00c6413ca5892e60c]
-module.ec2_public.aws_vpc_security_group_egress_rule.this["ipv6_default"]: Refreshing state... [id=sgr-0fa7e17e04de01110]
-module.ec2_public.aws_instance.this[0]: Refreshing state... [id=i-07610e116eef43249]
-module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-0dca79304c2e4f70a]
-module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-05bf73217e26502f01080289494]
-module.ec2_private["1"].data.aws_partition.current: Reading...
+module.ec2_public.data.aws_subnet.this[0]: Reading...
+module.loadbalancer_sg.aws_security_group_rule.ingress_with_cidr_blocks[0]: Refreshing state... [id=sgrule-1681703784]
+module.loadbalancer_sg.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-2666607276]
+module.loadbalancer_sg.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-2341846286]
+module.elb.module.elb.aws_elb.this[0]: Refreshing state... [id=HR-stag-myelb]
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-0e122ea7d98b8ec90]
+module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-0d3d7952f3ba2336d1080289494]
+module.public_bastion_sg.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-2573408486]
+module.public_bastion_sg.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-4169090323]
+module.ec2_public.data.aws_subnet.this[0]: Read complete after 1s [id=subnet-0ec58d193ab1c43d5]
+module.private_sg.aws_security_group_rule.ingress_rules[0]: Refreshing state... [id=sgrule-214326261]
+module.private_sg.aws_security_group_rule.ingress_rules[1]: Refreshing state... [id=sgrule-2158926539]
+module.private_sg.aws_security_group_rule.egress_rules[0]: Refreshing state... [id=sgrule-359227866]
+module.vpc.aws_route_table_association.database[1]: Refreshing state... [id=rtbassoc-0816a57a1b4729560]
+module.vpc.aws_route_table_association.database[0]: Refreshing state... [id=rtbassoc-0e8d022ef3ae6af27]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-044596a2915087cac]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-08491e3c0faf010d7]
+module.ec2_public.aws_security_group.this[0]: Refreshing state... [id=sg-0c1b4fbdf22d9056d]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-0d30b93d4164d24bb]
+module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-0a82e55000bc8bd561080289494]
+module.ec2_public.aws_vpc_security_group_egress_rule.this["ipv4_default"]: Refreshing state... [id=sgr-0cb656f43a490e184]
+module.ec2_public.aws_vpc_security_group_egress_rule.this["ipv6_default"]: Refreshing state... [id=sgr-011edc2751a2c48c4]
+module.ec2_public.aws_instance.this[0]: Refreshing state... [id=i-0d21e4f9c56937afa]
 module.ec2_private["0"].data.aws_partition.current: Reading...
+module.ec2_private["1"].data.aws_partition.current: Reading...
 module.ec2_private["1"].data.aws_partition.current: Read complete after 0s [id=aws]
 module.ec2_private["0"].data.aws_partition.current: Read complete after 0s [id=aws]
-module.ec2_private["0"].data.aws_subnet.this[0]: Reading...
 module.ec2_private["1"].data.aws_subnet.this[0]: Reading...
-module.ec2_private["0"].data.aws_subnet.this[0]: Read complete after 1s [id=subnet-0b8ffa00480cda2da]
-module.ec2_private["1"].data.aws_subnet.this[0]: Read complete after 1s [id=subnet-0c9e7f849b657e43e]
-module.ec2_private["0"].aws_security_group.this[0]: Refreshing state... [id=sg-03fb0ed5726d59c6c]
-module.ec2_private["1"].aws_security_group.this[0]: Refreshing state... [id=sg-07461a8e1cc2728d0]
-module.ec2_private["0"].aws_vpc_security_group_egress_rule.this["ipv6_default"]: Refreshing state... [id=sgr-0cfa1352e036f338c]
-module.ec2_private["0"].aws_vpc_security_group_egress_rule.this["ipv4_default"]: Refreshing state... [id=sgr-0939db18a5cc25833]
-module.ec2_private["1"].aws_vpc_security_group_egress_rule.this["ipv6_default"]: Refreshing state... [id=sgr-0e2f0149f67796bbe]
-module.ec2_private["1"].aws_vpc_security_group_egress_rule.this["ipv4_default"]: Refreshing state... [id=sgr-0e90409e0d4649c4f]
-module.ec2_private["0"].aws_instance.this[0]: Refreshing state... [id=i-00dc78dc72102bed7]
-module.ec2_private["1"].aws_instance.this[0]: Refreshing state... [id=i-08b2e9dd83b27080f]
-aws_eip.bastion_eip: Refreshing state... [id=eipalloc-0631c94ca1c4c7261]
-null_resource.name: Refreshing state... [id=3205456980473082811]
+module.ec2_private["0"].data.aws_subnet.this[0]: Reading...
+module.ec2_private["1"].data.aws_subnet.this[0]: Read complete after 1s [id=subnet-0555e4c27a39d69d6]
+module.ec2_private["0"].data.aws_subnet.this[0]: Read complete after 1s [id=subnet-02ca124c0a0d38668]
+module.ec2_private["1"].aws_security_group.this[0]: Refreshing state... [id=sg-02a35f1045fa33a1b]
+module.ec2_private["0"].aws_security_group.this[0]: Refreshing state... [id=sg-05ce8b0c97c2b4257]
+module.ec2_private["0"].aws_vpc_security_group_egress_rule.this["ipv6_default"]: Refreshing state... [id=sgr-088a5dde5b071e388]
+module.ec2_private["1"].aws_vpc_security_group_egress_rule.this["ipv6_default"]: Refreshing state... [id=sgr-02b9bac607f13309e]
+module.ec2_private["0"].aws_vpc_security_group_egress_rule.this["ipv4_default"]: Refreshing state... [id=sgr-06526a4eb70fc6f31]
+module.ec2_private["1"].aws_vpc_security_group_egress_rule.this["ipv4_default"]: Refreshing state... [id=sgr-0770adc93dc75f285]
+module.ec2_private["1"].aws_instance.this[0]: Refreshing state... [id=i-0765c6a03504cc0fd]
+module.ec2_private["0"].aws_instance.this[0]: Refreshing state... [id=i-0ae7cdc69d75939c8]
+aws_eip.bastion_eip: Refreshing state... [id=eipalloc-02b285946280f9a4b]
+null_resource.name: Refreshing state... [id=6337965838848979654]
+module.elb.module.elb_attachment.aws_elb_attachment.this[1]: Refreshing state... [id=HR-stag-myelb-2025082823273370790000000f]
+module.elb.module.elb_attachment.aws_elb_attachment.this[0]: Refreshing state... [id=HR-stag-myelb-2025082823273370740000000e]
 
 Terraform used the selected providers to generate the following execution
 plan. Resource actions are indicated with the following symbols:
@@ -68,18 +75,18 @@ Terraform will perform the following actions:
 
   # aws_eip.bastion_eip will be destroyed
   - resource "aws_eip" "bastion_eip" {
-      - allocation_id            = "eipalloc-0631c94ca1c4c7261" -> null
-      - arn                      = "arn:aws:ec2:us-east-1:683627574821:elastic-ip/eipalloc-0631c94ca1c4c7261" -> null
-      - association_id           = "eipassoc-0844c94a4850483b0" -> null
+      - allocation_id            = "eipalloc-02b285946280f9a4b" -> null
+      - arn                      = "arn:aws:ec2:us-east-1:683627574821:elastic-ip/eipalloc-02b285946280f9a4b" -> null
+      - association_id           = "eipassoc-03d9ca0b8e8d85cc9" -> null
       - domain                   = "vpc" -> null
-      - id                       = "eipalloc-0631c94ca1c4c7261" -> null
-      - instance                 = "i-07610e116eef43249" -> null
+      - id                       = "eipalloc-02b285946280f9a4b" -> null
+      - instance                 = "i-0d21e4f9c56937afa" -> null
       - network_border_group     = "us-east-1" -> null
-      - network_interface        = "eni-07f51a259c36f80b8" -> null
-      - private_dns              = "ip-10-0-101-193.ec2.internal" -> null
-      - private_ip               = "10.0.101.193" -> null
-      - public_dns               = "ec2-54-87-7-66.compute-1.amazonaws.com" -> null
-      - public_ip                = "54.87.7.66" -> null
+      - network_interface        = "eni-084f716c3aa0fd795" -> null
+      - private_dns              = "ip-10-0-101-204.ec2.internal" -> null
+      - private_ip               = "10.0.101.204" -> null
+      - public_dns               = "ec2-3-92-151-108.compute-1.amazonaws.com" -> null
+      - public_ip                = "3.92.151.108" -> null
       - public_ipv4_pool         = "amazon" -> null
       - region                   = "us-east-1" -> null
       - tags                     = {
@@ -95,13 +102,13 @@ Terraform will perform the following actions:
 
   # null_resource.name will be destroyed
   - resource "null_resource" "name" {
-      - id = "3205456980473082811" -> null
+      - id = "6337965838848979654" -> null
     }
 
   # module.ec2_private["0"].aws_instance.this[0] will be destroyed
   - resource "aws_instance" "this" {
       - ami                                  = "ami-0e95a5e2743ec9ec9" -> null
-      - arn                                  = "arn:aws:ec2:us-east-1:683627574821:instance/i-00dc78dc72102bed7" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:683627574821:instance/i-0ae7cdc69d75939c8" -> null
       - associate_public_ip_address          = false -> null
       - availability_zone                    = "us-east-1c" -> null
       - disable_api_stop                     = false -> null
@@ -110,7 +117,7 @@ Terraform will perform the following actions:
       - force_destroy                        = false -> null
       - get_password_data                    = false -> null
       - hibernation                          = false -> null
-      - id                                   = "i-00dc78dc72102bed7" -> null
+      - id                                   = "i-0ae7cdc69d75939c8" -> null
       - instance_initiated_shutdown_behavior = "stop" -> null
       - instance_state                       = "running" -> null
       - instance_type                        = "t3.micro" -> null
@@ -119,14 +126,14 @@ Terraform will perform the following actions:
       - key_name                             = "us_virginia_key" -> null
       - monitoring                           = false -> null
       - placement_partition_number           = 0 -> null
-      - primary_network_interface_id         = "eni-033a9142f91770ca6" -> null
-      - private_dns                          = "ip-10-0-1-157.ec2.internal" -> null
-      - private_ip                           = "10.0.1.157" -> null
+      - primary_network_interface_id         = "eni-0b536c81d870286ec" -> null
+      - private_dns                          = "ip-10-0-1-91.ec2.internal" -> null
+      - private_ip                           = "10.0.1.91" -> null
       - region                               = "us-east-1" -> null
       - secondary_private_ips                = [] -> null
       - security_groups                      = [] -> null
       - source_dest_check                    = true -> null
-      - subnet_id                            = "subnet-0b8ffa00480cda2da" -> null
+      - subnet_id                            = "subnet-02ca124c0a0d38668" -> null
       - tags                                 = {
           - "Name"        = "stag-vm"
           - "environment" = "stag"
@@ -161,8 +168,8 @@ Terraform will perform the following actions:
           - "owners"      = "HR"
         } -> null
       - vpc_security_group_ids               = [
-          - "sg-004831a0a97b04d73",
-          - "sg-03fb0ed5726d59c6c",
+          - "sg-05ce8b0c97c2b4257",
+          - "sg-0ffa1f1f8a76fb1fc",
         ] -> null
         # (9 unchanged attributes hidden)
 
@@ -198,7 +205,7 @@ Terraform will perform the following actions:
 
       - primary_network_interface {
           - delete_on_termination = true -> null
-          - network_interface_id  = "eni-033a9142f91770ca6" -> null
+          - network_interface_id  = "eni-0b536c81d870286ec" -> null
         }
 
       - private_dns_name_options {
@@ -215,7 +222,7 @@ Terraform will perform the following actions:
           - tags                  = {} -> null
           - tags_all              = {} -> null
           - throughput            = 0 -> null
-          - volume_id             = "vol-0da36837569aa4323" -> null
+          - volume_id             = "vol-03d7c27c77de045e7" -> null
           - volume_size           = 8 -> null
           - volume_type           = "gp2" -> null
             # (1 unchanged attribute hidden)
@@ -226,7 +233,7 @@ Terraform will perform the following actions:
 
   # module.ec2_private["0"].aws_security_group.this[0] will be destroyed
   - resource "aws_security_group" "this" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-03fb0ed5726d59c6c" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-05ce8b0c97c2b4257" -> null
       - description            = "Managed by Terraform" -> null
       - egress                 = [
           - {
@@ -256,9 +263,9 @@ Terraform will perform the following actions:
               - to_port          = 0
             },
         ] -> null
-      - id                     = "sg-03fb0ed5726d59c6c" -> null
+      - id                     = "sg-05ce8b0c97c2b4257" -> null
       - ingress                = [] -> null
-      - name                   = "stag-vm-2025082821250011470000000a" -> null
+      - name                   = "stag-vm-2025082823270656910000000b" -> null
       - name_prefix            = "stag-vm-" -> null
       - owner_id               = "683627574821" -> null
       - region                 = "us-east-1" -> null
@@ -273,19 +280,19 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                 = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                 = "vpc-0c9934474e2d271f6" -> null
     }
 
   # module.ec2_private["0"].aws_vpc_security_group_egress_rule.this["ipv4_default"] will be destroyed
   - resource "aws_vpc_security_group_egress_rule" "this" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group-rule/sgr-0939db18a5cc25833" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group-rule/sgr-06526a4eb70fc6f31" -> null
       - cidr_ipv4              = "0.0.0.0/0" -> null
       - description            = "Allow all IPv4 traffic" -> null
-      - id                     = "sgr-0939db18a5cc25833" -> null
+      - id                     = "sgr-06526a4eb70fc6f31" -> null
       - ip_protocol            = "-1" -> null
       - region                 = "us-east-1" -> null
-      - security_group_id      = "sg-03fb0ed5726d59c6c" -> null
-      - security_group_rule_id = "sgr-0939db18a5cc25833" -> null
+      - security_group_id      = "sg-05ce8b0c97c2b4257" -> null
+      - security_group_rule_id = "sgr-06526a4eb70fc6f31" -> null
       - tags                   = {
           - "Name"        = "stag-vm-ipv4_default"
           - "environment" = "stag"
@@ -300,14 +307,14 @@ Terraform will perform the following actions:
 
   # module.ec2_private["0"].aws_vpc_security_group_egress_rule.this["ipv6_default"] will be destroyed
   - resource "aws_vpc_security_group_egress_rule" "this" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group-rule/sgr-0cfa1352e036f338c" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group-rule/sgr-088a5dde5b071e388" -> null
       - cidr_ipv6              = "::/0" -> null
       - description            = "Allow all IPv6 traffic" -> null
-      - id                     = "sgr-0cfa1352e036f338c" -> null
+      - id                     = "sgr-088a5dde5b071e388" -> null
       - ip_protocol            = "-1" -> null
       - region                 = "us-east-1" -> null
-      - security_group_id      = "sg-03fb0ed5726d59c6c" -> null
-      - security_group_rule_id = "sgr-0cfa1352e036f338c" -> null
+      - security_group_id      = "sg-05ce8b0c97c2b4257" -> null
+      - security_group_rule_id = "sgr-088a5dde5b071e388" -> null
       - tags                   = {
           - "Name"        = "stag-vm-ipv6_default"
           - "environment" = "stag"
@@ -323,7 +330,7 @@ Terraform will perform the following actions:
   # module.ec2_private["1"].aws_instance.this[0] will be destroyed
   - resource "aws_instance" "this" {
       - ami                                  = "ami-0e95a5e2743ec9ec9" -> null
-      - arn                                  = "arn:aws:ec2:us-east-1:683627574821:instance/i-08b2e9dd83b27080f" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:683627574821:instance/i-0765c6a03504cc0fd" -> null
       - associate_public_ip_address          = false -> null
       - availability_zone                    = "us-east-1d" -> null
       - disable_api_stop                     = false -> null
@@ -332,7 +339,7 @@ Terraform will perform the following actions:
       - force_destroy                        = false -> null
       - get_password_data                    = false -> null
       - hibernation                          = false -> null
-      - id                                   = "i-08b2e9dd83b27080f" -> null
+      - id                                   = "i-0765c6a03504cc0fd" -> null
       - instance_initiated_shutdown_behavior = "stop" -> null
       - instance_state                       = "running" -> null
       - instance_type                        = "t3.micro" -> null
@@ -341,14 +348,14 @@ Terraform will perform the following actions:
       - key_name                             = "us_virginia_key" -> null
       - monitoring                           = false -> null
       - placement_partition_number           = 0 -> null
-      - primary_network_interface_id         = "eni-0d8b2e593a0196850" -> null
-      - private_dns                          = "ip-10-0-2-97.ec2.internal" -> null
-      - private_ip                           = "10.0.2.97" -> null
+      - primary_network_interface_id         = "eni-0cc54a976bd4ed718" -> null
+      - private_dns                          = "ip-10-0-2-43.ec2.internal" -> null
+      - private_ip                           = "10.0.2.43" -> null
       - region                               = "us-east-1" -> null
       - secondary_private_ips                = [] -> null
       - security_groups                      = [] -> null
       - source_dest_check                    = true -> null
-      - subnet_id                            = "subnet-0c9e7f849b657e43e" -> null
+      - subnet_id                            = "subnet-0555e4c27a39d69d6" -> null
       - tags                                 = {
           - "Name"        = "stag-vm"
           - "environment" = "stag"
@@ -383,8 +390,8 @@ Terraform will perform the following actions:
           - "owners"      = "HR"
         } -> null
       - vpc_security_group_ids               = [
-          - "sg-004831a0a97b04d73",
-          - "sg-07461a8e1cc2728d0",
+          - "sg-02a35f1045fa33a1b",
+          - "sg-0ffa1f1f8a76fb1fc",
         ] -> null
         # (9 unchanged attributes hidden)
 
@@ -420,7 +427,7 @@ Terraform will perform the following actions:
 
       - primary_network_interface {
           - delete_on_termination = true -> null
-          - network_interface_id  = "eni-0d8b2e593a0196850" -> null
+          - network_interface_id  = "eni-0cc54a976bd4ed718" -> null
         }
 
       - private_dns_name_options {
@@ -437,7 +444,7 @@ Terraform will perform the following actions:
           - tags                  = {} -> null
           - tags_all              = {} -> null
           - throughput            = 0 -> null
-          - volume_id             = "vol-0c6a237982747c920" -> null
+          - volume_id             = "vol-00c07c956c50e8acf" -> null
           - volume_size           = 8 -> null
           - volume_type           = "gp2" -> null
             # (1 unchanged attribute hidden)
@@ -448,7 +455,7 @@ Terraform will perform the following actions:
 
   # module.ec2_private["1"].aws_security_group.this[0] will be destroyed
   - resource "aws_security_group" "this" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-07461a8e1cc2728d0" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-02a35f1045fa33a1b" -> null
       - description            = "Managed by Terraform" -> null
       - egress                 = [
           - {
@@ -478,9 +485,9 @@ Terraform will perform the following actions:
               - to_port          = 0
             },
         ] -> null
-      - id                     = "sg-07461a8e1cc2728d0" -> null
+      - id                     = "sg-02a35f1045fa33a1b" -> null
       - ingress                = [] -> null
-      - name                   = "stag-vm-20250828212500113300000009" -> null
+      - name                   = "stag-vm-2025082823270656910000000a" -> null
       - name_prefix            = "stag-vm-" -> null
       - owner_id               = "683627574821" -> null
       - region                 = "us-east-1" -> null
@@ -495,19 +502,19 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                 = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                 = "vpc-0c9934474e2d271f6" -> null
     }
 
   # module.ec2_private["1"].aws_vpc_security_group_egress_rule.this["ipv4_default"] will be destroyed
   - resource "aws_vpc_security_group_egress_rule" "this" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group-rule/sgr-0e90409e0d4649c4f" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group-rule/sgr-0770adc93dc75f285" -> null
       - cidr_ipv4              = "0.0.0.0/0" -> null
       - description            = "Allow all IPv4 traffic" -> null
-      - id                     = "sgr-0e90409e0d4649c4f" -> null
+      - id                     = "sgr-0770adc93dc75f285" -> null
       - ip_protocol            = "-1" -> null
       - region                 = "us-east-1" -> null
-      - security_group_id      = "sg-07461a8e1cc2728d0" -> null
-      - security_group_rule_id = "sgr-0e90409e0d4649c4f" -> null
+      - security_group_id      = "sg-02a35f1045fa33a1b" -> null
+      - security_group_rule_id = "sgr-0770adc93dc75f285" -> null
       - tags                   = {
           - "Name"        = "stag-vm-ipv4_default"
           - "environment" = "stag"
@@ -522,14 +529,14 @@ Terraform will perform the following actions:
 
   # module.ec2_private["1"].aws_vpc_security_group_egress_rule.this["ipv6_default"] will be destroyed
   - resource "aws_vpc_security_group_egress_rule" "this" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group-rule/sgr-0e2f0149f67796bbe" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group-rule/sgr-02b9bac607f13309e" -> null
       - cidr_ipv6              = "::/0" -> null
       - description            = "Allow all IPv6 traffic" -> null
-      - id                     = "sgr-0e2f0149f67796bbe" -> null
+      - id                     = "sgr-02b9bac607f13309e" -> null
       - ip_protocol            = "-1" -> null
       - region                 = "us-east-1" -> null
-      - security_group_id      = "sg-07461a8e1cc2728d0" -> null
-      - security_group_rule_id = "sgr-0e2f0149f67796bbe" -> null
+      - security_group_id      = "sg-02a35f1045fa33a1b" -> null
+      - security_group_rule_id = "sgr-02b9bac607f13309e" -> null
       - tags                   = {
           - "Name"        = "stag-vm-ipv6_default"
           - "environment" = "stag"
@@ -545,7 +552,7 @@ Terraform will perform the following actions:
   # module.ec2_public.aws_instance.this[0] will be destroyed
   - resource "aws_instance" "this" {
       - ami                                  = "ami-0e95a5e2743ec9ec9" -> null
-      - arn                                  = "arn:aws:ec2:us-east-1:683627574821:instance/i-07610e116eef43249" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:683627574821:instance/i-0d21e4f9c56937afa" -> null
       - associate_public_ip_address          = true -> null
       - availability_zone                    = "us-east-1c" -> null
       - disable_api_stop                     = false -> null
@@ -554,7 +561,7 @@ Terraform will perform the following actions:
       - force_destroy                        = false -> null
       - get_password_data                    = false -> null
       - hibernation                          = false -> null
-      - id                                   = "i-07610e116eef43249" -> null
+      - id                                   = "i-0d21e4f9c56937afa" -> null
       - instance_initiated_shutdown_behavior = "stop" -> null
       - instance_state                       = "running" -> null
       - instance_type                        = "t3.micro" -> null
@@ -563,16 +570,16 @@ Terraform will perform the following actions:
       - key_name                             = "us_virginia_key" -> null
       - monitoring                           = false -> null
       - placement_partition_number           = 0 -> null
-      - primary_network_interface_id         = "eni-07f51a259c36f80b8" -> null
-      - private_dns                          = "ip-10-0-101-193.ec2.internal" -> null
-      - private_ip                           = "10.0.101.193" -> null
-      - public_dns                           = "ec2-54-87-7-66.compute-1.amazonaws.com" -> null
-      - public_ip                            = "54.87.7.66" -> null
+      - primary_network_interface_id         = "eni-084f716c3aa0fd795" -> null
+      - private_dns                          = "ip-10-0-101-204.ec2.internal" -> null
+      - private_ip                           = "10.0.101.204" -> null
+      - public_dns                           = "ec2-3-92-151-108.compute-1.amazonaws.com" -> null
+      - public_ip                            = "3.92.151.108" -> null
       - region                               = "us-east-1" -> null
       - secondary_private_ips                = [] -> null
       - security_groups                      = [] -> null
       - source_dest_check                    = true -> null
-      - subnet_id                            = "subnet-04e7cf9492cd42c4d" -> null
+      - subnet_id                            = "subnet-0ec58d193ab1c43d5" -> null
       - tags                                 = {
           - "Name"        = "stag-BastionHost"
           - "environment" = "stag"
@@ -591,8 +598,8 @@ Terraform will perform the following actions:
           - "owners"      = "HR"
         } -> null
       - vpc_security_group_ids               = [
-          - "sg-045700c7e27761559",
-          - "sg-0baa7fd2d81e12446",
+          - "sg-0986a9094ad77c9ab",
+          - "sg-0c1b4fbdf22d9056d",
         ] -> null
         # (7 unchanged attributes hidden)
 
@@ -628,7 +635,7 @@ Terraform will perform the following actions:
 
       - primary_network_interface {
           - delete_on_termination = true -> null
-          - network_interface_id  = "eni-07f51a259c36f80b8" -> null
+          - network_interface_id  = "eni-084f716c3aa0fd795" -> null
         }
 
       - private_dns_name_options {
@@ -645,7 +652,7 @@ Terraform will perform the following actions:
           - tags                  = {} -> null
           - tags_all              = {} -> null
           - throughput            = 0 -> null
-          - volume_id             = "vol-0b530e89b5f9b655d" -> null
+          - volume_id             = "vol-01ccb5103ff8191fc" -> null
           - volume_size           = 8 -> null
           - volume_type           = "gp2" -> null
             # (1 unchanged attribute hidden)
@@ -656,7 +663,7 @@ Terraform will perform the following actions:
 
   # module.ec2_public.aws_security_group.this[0] will be destroyed
   - resource "aws_security_group" "this" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-0baa7fd2d81e12446" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-0c1b4fbdf22d9056d" -> null
       - description            = "Managed by Terraform" -> null
       - egress                 = [
           - {
@@ -686,23 +693,9 @@ Terraform will perform the following actions:
               - to_port          = 0
             },
         ] -> null
-      - id                     = "sg-0baa7fd2d81e12446" -> null
-      - ingress                = [
-          - {
-              - cidr_blocks      = [
-                  - "0.0.0.0/0",
-                ]
-              - from_port        = 80
-              - ipv6_cidr_blocks = []
-              - prefix_list_ids  = []
-              - protocol         = "tcp"
-              - security_groups  = []
-              - self             = false
-              - to_port          = 80
-                # (1 unchanged attribute hidden)
-            },
-        ] -> null
-      - name                   = "stag-BastionHost-20250828212316378300000006" -> null
+      - id                     = "sg-0c1b4fbdf22d9056d" -> null
+      - ingress                = [] -> null
+      - name                   = "stag-BastionHost-20250828232519875800000007" -> null
       - name_prefix            = "stag-BastionHost-" -> null
       - owner_id               = "683627574821" -> null
       - region                 = "us-east-1" -> null
@@ -717,19 +710,19 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                 = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                 = "vpc-0c9934474e2d271f6" -> null
     }
 
   # module.ec2_public.aws_vpc_security_group_egress_rule.this["ipv4_default"] will be destroyed
   - resource "aws_vpc_security_group_egress_rule" "this" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group-rule/sgr-00c6413ca5892e60c" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group-rule/sgr-0cb656f43a490e184" -> null
       - cidr_ipv4              = "0.0.0.0/0" -> null
       - description            = "Allow all IPv4 traffic" -> null
-      - id                     = "sgr-00c6413ca5892e60c" -> null
+      - id                     = "sgr-0cb656f43a490e184" -> null
       - ip_protocol            = "-1" -> null
       - region                 = "us-east-1" -> null
-      - security_group_id      = "sg-0baa7fd2d81e12446" -> null
-      - security_group_rule_id = "sgr-00c6413ca5892e60c" -> null
+      - security_group_id      = "sg-0c1b4fbdf22d9056d" -> null
+      - security_group_rule_id = "sgr-0cb656f43a490e184" -> null
       - tags                   = {
           - "Name"        = "stag-BastionHost-ipv4_default"
           - "environment" = "stag"
@@ -744,14 +737,14 @@ Terraform will perform the following actions:
 
   # module.ec2_public.aws_vpc_security_group_egress_rule.this["ipv6_default"] will be destroyed
   - resource "aws_vpc_security_group_egress_rule" "this" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group-rule/sgr-0fa7e17e04de01110" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group-rule/sgr-011edc2751a2c48c4" -> null
       - cidr_ipv6              = "::/0" -> null
       - description            = "Allow all IPv6 traffic" -> null
-      - id                     = "sgr-0fa7e17e04de01110" -> null
+      - id                     = "sgr-011edc2751a2c48c4" -> null
       - ip_protocol            = "-1" -> null
       - region                 = "us-east-1" -> null
-      - security_group_id      = "sg-0baa7fd2d81e12446" -> null
-      - security_group_rule_id = "sgr-0fa7e17e04de01110" -> null
+      - security_group_id      = "sg-0c1b4fbdf22d9056d" -> null
+      - security_group_rule_id = "sgr-011edc2751a2c48c4" -> null
       - tags                   = {
           - "Name"        = "stag-BastionHost-ipv6_default"
           - "environment" = "stag"
@@ -764,9 +757,140 @@ Terraform will perform the following actions:
         } -> null
     }
 
+  # module.loadbalancer_sg.aws_security_group.this_name_prefix[0] will be destroyed
+  - resource "aws_security_group" "this_name_prefix" {
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-0d34779acf68a15e0" -> null
+      - description            = "Security Group with HTTP open for entire Internet (IPv4 CIDR), egress ports are all world open" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "All protocols"
+              - from_port        = 0
+              - ipv6_cidr_blocks = [
+                  - "::/0",
+                ]
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0d34779acf68a15e0" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "Allow Port 81 from internet"
+              - from_port        = 81
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 81
+            },
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "HTTP"
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+            },
+        ] -> null
+      - name                   = "loadbalancer-sg-20250828232516895100000003" -> null
+      - name_prefix            = "loadbalancer-sg-" -> null
+      - owner_id               = "683627574821" -> null
+      - region                 = "us-east-1" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name"        = "loadbalancer-sg"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all               = {
+          - "Name"        = "loadbalancer-sg"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - vpc_id                 = "vpc-0c9934474e2d271f6" -> null
+
+      - timeouts {
+          - create = "10m" -> null
+          - delete = "15m" -> null
+        }
+    }
+
+  # module.loadbalancer_sg.aws_security_group_rule.egress_rules[0] will be destroyed
+  - resource "aws_security_group_rule" "egress_rules" {
+      - cidr_blocks            = [
+          - "0.0.0.0/0",
+        ] -> null
+      - description            = "All protocols" -> null
+      - from_port              = 0 -> null
+      - id                     = "sgrule-2666607276" -> null
+      - ipv6_cidr_blocks       = [
+          - "::/0",
+        ] -> null
+      - prefix_list_ids        = [] -> null
+      - protocol               = "-1" -> null
+      - region                 = "us-east-1" -> null
+      - security_group_id      = "sg-0d34779acf68a15e0" -> null
+      - self                   = false -> null
+      - to_port                = 0 -> null
+      - type                   = "egress" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.loadbalancer_sg.aws_security_group_rule.ingress_rules[0] will be destroyed
+  - resource "aws_security_group_rule" "ingress_rules" {
+      - cidr_blocks            = [
+          - "0.0.0.0/0",
+        ] -> null
+      - description            = "HTTP" -> null
+      - from_port              = 80 -> null
+      - id                     = "sgrule-2341846286" -> null
+      - ipv6_cidr_blocks       = [] -> null
+      - prefix_list_ids        = [] -> null
+      - protocol               = "tcp" -> null
+      - region                 = "us-east-1" -> null
+      - security_group_id      = "sg-0d34779acf68a15e0" -> null
+      - security_group_rule_id = "sgr-0ee2cfb8e1620162b" -> null
+      - self                   = false -> null
+      - to_port                = 80 -> null
+      - type                   = "ingress" -> null
+    }
+
+  # module.loadbalancer_sg.aws_security_group_rule.ingress_with_cidr_blocks[0] will be destroyed
+  - resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      - cidr_blocks            = [
+          - "0.0.0.0/0",
+        ] -> null
+      - description            = "Allow Port 81 from internet" -> null
+      - from_port              = 81 -> null
+      - id                     = "sgrule-1681703784" -> null
+      - prefix_list_ids        = [] -> null
+      - protocol               = "tcp" -> null
+      - region                 = "us-east-1" -> null
+      - security_group_id      = "sg-0d34779acf68a15e0" -> null
+      - security_group_rule_id = "sgr-09d0bd496bc3921c5" -> null
+      - self                   = false -> null
+      - to_port                = 81 -> null
+      - type                   = "ingress" -> null
+    }
+
   # module.private_sg.aws_security_group.this_name_prefix[0] will be destroyed
   - resource "aws_security_group" "this_name_prefix" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-004831a0a97b04d73" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-0ffa1f1f8a76fb1fc" -> null
       - description            = "Security Group with HTTP & SSH port open for entire VPC Block (IPv4 CIDR), egress ports are all world open" -> null
       - egress                 = [
           - {
@@ -785,7 +909,7 @@ Terraform will perform the following actions:
               - to_port          = 0
             },
         ] -> null
-      - id                     = "sg-004831a0a97b04d73" -> null
+      - id                     = "sg-0ffa1f1f8a76fb1fc" -> null
       - ingress                = [
           - {
               - cidr_blocks      = [
@@ -814,7 +938,7 @@ Terraform will perform the following actions:
               - to_port          = 22
             },
         ] -> null
-      - name                   = "private-sg-20250828212310895300000001" -> null
+      - name                   = "private-sg-20250828232517234700000006" -> null
       - name_prefix            = "private-sg-" -> null
       - owner_id               = "683627574821" -> null
       - region                 = "us-east-1" -> null
@@ -829,7 +953,7 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                 = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                 = "vpc-0c9934474e2d271f6" -> null
 
       - timeouts {
           - create = "10m" -> null
@@ -844,14 +968,14 @@ Terraform will perform the following actions:
         ] -> null
       - description            = "All protocols" -> null
       - from_port              = 0 -> null
-      - id                     = "sgrule-2721466661" -> null
+      - id                     = "sgrule-359227866" -> null
       - ipv6_cidr_blocks       = [
           - "::/0",
         ] -> null
       - prefix_list_ids        = [] -> null
       - protocol               = "-1" -> null
       - region                 = "us-east-1" -> null
-      - security_group_id      = "sg-004831a0a97b04d73" -> null
+      - security_group_id      = "sg-0ffa1f1f8a76fb1fc" -> null
       - self                   = false -> null
       - to_port                = 0 -> null
       - type                   = "egress" -> null
@@ -865,13 +989,13 @@ Terraform will perform the following actions:
         ] -> null
       - description            = "SSH" -> null
       - from_port              = 22 -> null
-      - id                     = "sgrule-1866484314" -> null
+      - id                     = "sgrule-214326261" -> null
       - ipv6_cidr_blocks       = [] -> null
       - prefix_list_ids        = [] -> null
       - protocol               = "tcp" -> null
       - region                 = "us-east-1" -> null
-      - security_group_id      = "sg-004831a0a97b04d73" -> null
-      - security_group_rule_id = "sgr-0f9d0a015919ed6bc" -> null
+      - security_group_id      = "sg-0ffa1f1f8a76fb1fc" -> null
+      - security_group_rule_id = "sgr-040836beb6ae23929" -> null
       - self                   = false -> null
       - to_port                = 22 -> null
       - type                   = "ingress" -> null
@@ -884,13 +1008,13 @@ Terraform will perform the following actions:
         ] -> null
       - description            = "HTTP" -> null
       - from_port              = 80 -> null
-      - id                     = "sgrule-3811085156" -> null
+      - id                     = "sgrule-2158926539" -> null
       - ipv6_cidr_blocks       = [] -> null
       - prefix_list_ids        = [] -> null
       - protocol               = "tcp" -> null
       - region                 = "us-east-1" -> null
-      - security_group_id      = "sg-004831a0a97b04d73" -> null
-      - security_group_rule_id = "sgr-0287d30c967f0999c" -> null
+      - security_group_id      = "sg-0ffa1f1f8a76fb1fc" -> null
+      - security_group_rule_id = "sgr-03dcb6ecf01b01cf2" -> null
       - self                   = false -> null
       - to_port                = 80 -> null
       - type                   = "ingress" -> null
@@ -898,7 +1022,7 @@ Terraform will perform the following actions:
 
   # module.public_bastion_sg.aws_security_group.this_name_prefix[0] will be destroyed
   - resource "aws_security_group" "this_name_prefix" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-045700c7e27761559" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-0986a9094ad77c9ab" -> null
       - description            = "Security group with SSH port open for everybody (IPv4 CIDR), egress ports are all world open" -> null
       - egress                 = [
           - {
@@ -917,7 +1041,7 @@ Terraform will perform the following actions:
               - to_port          = 0
             },
         ] -> null
-      - id                     = "sg-045700c7e27761559" -> null
+      - id                     = "sg-0986a9094ad77c9ab" -> null
       - ingress                = [
           - {
               - cidr_blocks      = [
@@ -933,7 +1057,7 @@ Terraform will perform the following actions:
               - to_port          = 22
             },
         ] -> null
-      - name                   = "public-bastion-sg-20250828212313802600000005" -> null
+      - name                   = "public-bastion-sg-20250828232517207800000005" -> null
       - name_prefix            = "public-bastion-sg-" -> null
       - owner_id               = "683627574821" -> null
       - region                 = "us-east-1" -> null
@@ -948,7 +1072,7 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                 = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                 = "vpc-0c9934474e2d271f6" -> null
 
       - timeouts {
           - create = "10m" -> null
@@ -963,14 +1087,14 @@ Terraform will perform the following actions:
         ] -> null
       - description            = "All protocols" -> null
       - from_port              = 0 -> null
-      - id                     = "sgrule-1829228694" -> null
+      - id                     = "sgrule-4169090323" -> null
       - ipv6_cidr_blocks       = [
           - "::/0",
         ] -> null
       - prefix_list_ids        = [] -> null
       - protocol               = "-1" -> null
       - region                 = "us-east-1" -> null
-      - security_group_id      = "sg-045700c7e27761559" -> null
+      - security_group_id      = "sg-0986a9094ad77c9ab" -> null
       - self                   = false -> null
       - to_port                = 0 -> null
       - type                   = "egress" -> null
@@ -984,13 +1108,13 @@ Terraform will perform the following actions:
         ] -> null
       - description            = "SSH" -> null
       - from_port              = 22 -> null
-      - id                     = "sgrule-745883209" -> null
+      - id                     = "sgrule-2573408486" -> null
       - ipv6_cidr_blocks       = [] -> null
       - prefix_list_ids        = [] -> null
       - protocol               = "tcp" -> null
       - region                 = "us-east-1" -> null
-      - security_group_id      = "sg-045700c7e27761559" -> null
-      - security_group_rule_id = "sgr-08965d2acee71b84e" -> null
+      - security_group_id      = "sg-0986a9094ad77c9ab" -> null
+      - security_group_rule_id = "sgr-08354199c2ee477d4" -> null
       - self                   = false -> null
       - to_port                = 22 -> null
       - type                   = "ingress" -> null
@@ -1004,8 +1128,8 @@ Terraform will perform the following actions:
       - name                    = "hr-stag-myvpc" -> null
       - region                  = "us-east-1" -> null
       - subnet_ids              = [
-          - "subnet-079429476386dfe55",
-          - "subnet-0a184f9e4917b857f",
+          - "subnet-01f0a954963b71334",
+          - "subnet-094c88b5a67bba9e0",
         ] -> null
       - supported_network_types = [
           - "IPV4",
@@ -1020,24 +1144,24 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                  = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                  = "vpc-0c9934474e2d271f6" -> null
         # (1 unchanged attribute hidden)
     }
 
   # module.vpc.aws_default_network_acl.this[0] will be destroyed
   - resource "aws_default_network_acl" "this" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:network-acl/acl-0ee6b22198c648da8" -> null
-      - default_network_acl_id = "acl-0ee6b22198c648da8" -> null
-      - id                     = "acl-0ee6b22198c648da8" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:network-acl/acl-0db4216b5872a1a57" -> null
+      - default_network_acl_id = "acl-0db4216b5872a1a57" -> null
+      - id                     = "acl-0db4216b5872a1a57" -> null
       - owner_id               = "683627574821" -> null
       - region                 = "us-east-1" -> null
       - subnet_ids             = [
-          - "subnet-04e7cf9492cd42c4d",
-          - "subnet-079429476386dfe55",
-          - "subnet-0a184f9e4917b857f",
-          - "subnet-0b8ffa00480cda2da",
-          - "subnet-0c9e7f849b657e43e",
-          - "subnet-0eb57ea2905213cb7",
+          - "subnet-01f0a954963b71334",
+          - "subnet-02ca124c0a0d38668",
+          - "subnet-0555e4c27a39d69d6",
+          - "subnet-094c88b5a67bba9e0",
+          - "subnet-0b685efe80c449b7e",
+          - "subnet-0ec58d193ab1c43d5",
         ] -> null
       - tags                   = {
           - "Name"        = "HR-stag-myvpc-default"
@@ -1049,7 +1173,7 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                 = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                 = "vpc-0c9934474e2d271f6" -> null
 
       - egress {
           - action          = "allow" -> null
@@ -1100,9 +1224,9 @@ Terraform will perform the following actions:
 
   # module.vpc.aws_default_route_table.default[0] will be destroyed
   - resource "aws_default_route_table" "default" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:route-table/rtb-08744faf269e98f9b" -> null
-      - default_route_table_id = "rtb-08744faf269e98f9b" -> null
-      - id                     = "rtb-08744faf269e98f9b" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:route-table/rtb-0630061c2c227224c" -> null
+      - default_route_table_id = "rtb-0630061c2c227224c" -> null
+      - id                     = "rtb-0630061c2c227224c" -> null
       - owner_id               = "683627574821" -> null
       - propagating_vgws       = [] -> null
       - region                 = "us-east-1" -> null
@@ -1117,7 +1241,7 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                 = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                 = "vpc-0c9934474e2d271f6" -> null
 
       - timeouts {
           - create = "5m" -> null
@@ -1127,10 +1251,10 @@ Terraform will perform the following actions:
 
   # module.vpc.aws_default_security_group.this[0] will be destroyed
   - resource "aws_default_security_group" "this" {
-      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-08fdfc1b98a20cad4" -> null
+      - arn                    = "arn:aws:ec2:us-east-1:683627574821:security-group/sg-0b97fd98fb9755c1a" -> null
       - description            = "default VPC security group" -> null
       - egress                 = [] -> null
-      - id                     = "sg-08fdfc1b98a20cad4" -> null
+      - id                     = "sg-0b97fd98fb9755c1a" -> null
       - ingress                = [] -> null
       - name                   = "default" -> null
       - owner_id               = "683627574821" -> null
@@ -1146,23 +1270,23 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                 = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                 = "vpc-0c9934474e2d271f6" -> null
         # (1 unchanged attribute hidden)
     }
 
   # module.vpc.aws_eip.nat[0] will be destroyed
   - resource "aws_eip" "nat" {
-      - allocation_id            = "eipalloc-0c0535f313be0fed7" -> null
-      - arn                      = "arn:aws:ec2:us-east-1:683627574821:elastic-ip/eipalloc-0c0535f313be0fed7" -> null
-      - association_id           = "eipassoc-0cc66c425573f2a26" -> null
+      - allocation_id            = "eipalloc-0e122ea7d98b8ec90" -> null
+      - arn                      = "arn:aws:ec2:us-east-1:683627574821:elastic-ip/eipalloc-0e122ea7d98b8ec90" -> null
+      - association_id           = "eipassoc-04a615f5ae1c9cf1e" -> null
       - domain                   = "vpc" -> null
-      - id                       = "eipalloc-0c0535f313be0fed7" -> null
+      - id                       = "eipalloc-0e122ea7d98b8ec90" -> null
       - network_border_group     = "us-east-1" -> null
-      - network_interface        = "eni-08d26c8c120148833" -> null
-      - private_dns              = "ip-10-0-101-84.ec2.internal" -> null
-      - private_ip               = "10.0.101.84" -> null
-      - public_dns               = "ec2-54-243-99-84.compute-1.amazonaws.com" -> null
-      - public_ip                = "54.243.99.84" -> null
+      - network_interface        = "eni-059627cf1427a9467" -> null
+      - private_dns              = "ip-10-0-101-155.ec2.internal" -> null
+      - private_ip               = "10.0.101.155" -> null
+      - public_dns               = "ec2-204-236-237-248.compute-1.amazonaws.com" -> null
+      - public_ip                = "204.236.237.248" -> null
       - public_ipv4_pool         = "amazon" -> null
       - region                   = "us-east-1" -> null
       - tags                     = {
@@ -1180,8 +1304,8 @@ Terraform will perform the following actions:
 
   # module.vpc.aws_internet_gateway.this[0] will be destroyed
   - resource "aws_internet_gateway" "this" {
-      - arn      = "arn:aws:ec2:us-east-1:683627574821:internet-gateway/igw-00d1b07a1530960b1" -> null
-      - id       = "igw-00d1b07a1530960b1" -> null
+      - arn      = "arn:aws:ec2:us-east-1:683627574821:internet-gateway/igw-07111b667d4c59923" -> null
+      - id       = "igw-07111b667d4c59923" -> null
       - owner_id = "683627574821" -> null
       - region   = "us-east-1" -> null
       - tags     = {
@@ -1194,23 +1318,23 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id   = "vpc-0e324e8debeb93925" -> null
+      - vpc_id   = "vpc-0c9934474e2d271f6" -> null
     }
 
   # module.vpc.aws_nat_gateway.this[0] will be destroyed
   - resource "aws_nat_gateway" "this" {
-      - allocation_id                      = "eipalloc-0c0535f313be0fed7" -> null
-      - association_id                     = "eipassoc-0cc66c425573f2a26" -> null
+      - allocation_id                      = "eipalloc-0e122ea7d98b8ec90" -> null
+      - association_id                     = "eipassoc-04a615f5ae1c9cf1e" -> null
       - connectivity_type                  = "public" -> null
-      - id                                 = "nat-0dca79304c2e4f70a" -> null
-      - network_interface_id               = "eni-08d26c8c120148833" -> null
-      - private_ip                         = "10.0.101.84" -> null
-      - public_ip                          = "54.243.99.84" -> null
+      - id                                 = "nat-0d30b93d4164d24bb" -> null
+      - network_interface_id               = "eni-059627cf1427a9467" -> null
+      - private_ip                         = "10.0.101.155" -> null
+      - public_ip                          = "204.236.237.248" -> null
       - region                             = "us-east-1" -> null
       - secondary_allocation_ids           = [] -> null
       - secondary_private_ip_address_count = 0 -> null
       - secondary_private_ip_addresses     = [] -> null
-      - subnet_id                          = "subnet-04e7cf9492cd42c4d" -> null
+      - subnet_id                          = "subnet-0ec58d193ab1c43d5" -> null
       - tags                               = {
           - "Name"        = "HR-stag-myvpc-us-east-1c"
           - "environment" = "stag"
@@ -1226,11 +1350,11 @@ Terraform will perform the following actions:
   # module.vpc.aws_route.private_nat_gateway[0] will be destroyed
   - resource "aws_route" "private_nat_gateway" {
       - destination_cidr_block      = "0.0.0.0/0" -> null
-      - id                          = "r-rtb-05bf73217e26502f01080289494" -> null
-      - nat_gateway_id              = "nat-0dca79304c2e4f70a" -> null
+      - id                          = "r-rtb-0a82e55000bc8bd561080289494" -> null
+      - nat_gateway_id              = "nat-0d30b93d4164d24bb" -> null
       - origin                      = "CreateRoute" -> null
       - region                      = "us-east-1" -> null
-      - route_table_id              = "rtb-05bf73217e26502f0" -> null
+      - route_table_id              = "rtb-0a82e55000bc8bd56" -> null
       - state                       = "active" -> null
         # (13 unchanged attributes hidden)
 
@@ -1242,11 +1366,11 @@ Terraform will perform the following actions:
   # module.vpc.aws_route.public_internet_gateway[0] will be destroyed
   - resource "aws_route" "public_internet_gateway" {
       - destination_cidr_block      = "0.0.0.0/0" -> null
-      - gateway_id                  = "igw-00d1b07a1530960b1" -> null
-      - id                          = "r-rtb-03428d5d23e2733ca1080289494" -> null
+      - gateway_id                  = "igw-07111b667d4c59923" -> null
+      - id                          = "r-rtb-0d3d7952f3ba2336d1080289494" -> null
       - origin                      = "CreateRoute" -> null
       - region                      = "us-east-1" -> null
-      - route_table_id              = "rtb-03428d5d23e2733ca" -> null
+      - route_table_id              = "rtb-0d3d7952f3ba2336d" -> null
       - state                       = "active" -> null
         # (13 unchanged attributes hidden)
 
@@ -1257,8 +1381,8 @@ Terraform will perform the following actions:
 
   # module.vpc.aws_route_table.database[0] will be destroyed
   - resource "aws_route_table" "database" {
-      - arn              = "arn:aws:ec2:us-east-1:683627574821:route-table/rtb-0f30d6a0ae0733a72" -> null
-      - id               = "rtb-0f30d6a0ae0733a72" -> null
+      - arn              = "arn:aws:ec2:us-east-1:683627574821:route-table/rtb-0fa9bc8ace8dceff9" -> null
+      - id               = "rtb-0fa9bc8ace8dceff9" -> null
       - owner_id         = "683627574821" -> null
       - propagating_vgws = [] -> null
       - region           = "us-east-1" -> null
@@ -1273,20 +1397,20 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id           = "vpc-0e324e8debeb93925" -> null
+      - vpc_id           = "vpc-0c9934474e2d271f6" -> null
     }
 
   # module.vpc.aws_route_table.private[0] will be destroyed
   - resource "aws_route_table" "private" {
-      - arn              = "arn:aws:ec2:us-east-1:683627574821:route-table/rtb-05bf73217e26502f0" -> null
-      - id               = "rtb-05bf73217e26502f0" -> null
+      - arn              = "arn:aws:ec2:us-east-1:683627574821:route-table/rtb-0a82e55000bc8bd56" -> null
+      - id               = "rtb-0a82e55000bc8bd56" -> null
       - owner_id         = "683627574821" -> null
       - propagating_vgws = [] -> null
       - region           = "us-east-1" -> null
       - route            = [
           - {
               - cidr_block                 = "0.0.0.0/0"
-              - nat_gateway_id             = "nat-0dca79304c2e4f70a"
+              - nat_gateway_id             = "nat-0d30b93d4164d24bb"
                 # (11 unchanged attributes hidden)
             },
         ] -> null
@@ -1300,20 +1424,20 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id           = "vpc-0e324e8debeb93925" -> null
+      - vpc_id           = "vpc-0c9934474e2d271f6" -> null
     }
 
   # module.vpc.aws_route_table.public[0] will be destroyed
   - resource "aws_route_table" "public" {
-      - arn              = "arn:aws:ec2:us-east-1:683627574821:route-table/rtb-03428d5d23e2733ca" -> null
-      - id               = "rtb-03428d5d23e2733ca" -> null
+      - arn              = "arn:aws:ec2:us-east-1:683627574821:route-table/rtb-0d3d7952f3ba2336d" -> null
+      - id               = "rtb-0d3d7952f3ba2336d" -> null
       - owner_id         = "683627574821" -> null
       - propagating_vgws = [] -> null
       - region           = "us-east-1" -> null
       - route            = [
           - {
               - cidr_block                 = "0.0.0.0/0"
-              - gateway_id                 = "igw-00d1b07a1530960b1"
+              - gateway_id                 = "igw-07111b667d4c59923"
                 # (11 unchanged attributes hidden)
             },
         ] -> null
@@ -1327,66 +1451,66 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id           = "vpc-0e324e8debeb93925" -> null
+      - vpc_id           = "vpc-0c9934474e2d271f6" -> null
     }
 
   # module.vpc.aws_route_table_association.database[0] will be destroyed
   - resource "aws_route_table_association" "database" {
-      - id             = "rtbassoc-0209d855279c499f2" -> null
+      - id             = "rtbassoc-0e8d022ef3ae6af27" -> null
       - region         = "us-east-1" -> null
-      - route_table_id = "rtb-0f30d6a0ae0733a72" -> null
-      - subnet_id      = "subnet-0a184f9e4917b857f" -> null
+      - route_table_id = "rtb-0fa9bc8ace8dceff9" -> null
+      - subnet_id      = "subnet-01f0a954963b71334" -> null
         # (1 unchanged attribute hidden)
     }
 
   # module.vpc.aws_route_table_association.database[1] will be destroyed
   - resource "aws_route_table_association" "database" {
-      - id             = "rtbassoc-0c5acebb4232c5729" -> null
+      - id             = "rtbassoc-0816a57a1b4729560" -> null
       - region         = "us-east-1" -> null
-      - route_table_id = "rtb-0f30d6a0ae0733a72" -> null
-      - subnet_id      = "subnet-079429476386dfe55" -> null
+      - route_table_id = "rtb-0fa9bc8ace8dceff9" -> null
+      - subnet_id      = "subnet-094c88b5a67bba9e0" -> null
         # (1 unchanged attribute hidden)
     }
 
   # module.vpc.aws_route_table_association.private[0] will be destroyed
   - resource "aws_route_table_association" "private" {
-      - id             = "rtbassoc-04c847bd2b0335846" -> null
+      - id             = "rtbassoc-08491e3c0faf010d7" -> null
       - region         = "us-east-1" -> null
-      - route_table_id = "rtb-05bf73217e26502f0" -> null
-      - subnet_id      = "subnet-0b8ffa00480cda2da" -> null
+      - route_table_id = "rtb-0a82e55000bc8bd56" -> null
+      - subnet_id      = "subnet-02ca124c0a0d38668" -> null
         # (1 unchanged attribute hidden)
     }
 
   # module.vpc.aws_route_table_association.private[1] will be destroyed
   - resource "aws_route_table_association" "private" {
-      - id             = "rtbassoc-0fdae572a15b7b756" -> null
+      - id             = "rtbassoc-044596a2915087cac" -> null
       - region         = "us-east-1" -> null
-      - route_table_id = "rtb-05bf73217e26502f0" -> null
-      - subnet_id      = "subnet-0c9e7f849b657e43e" -> null
+      - route_table_id = "rtb-0a82e55000bc8bd56" -> null
+      - subnet_id      = "subnet-0555e4c27a39d69d6" -> null
         # (1 unchanged attribute hidden)
     }
 
   # module.vpc.aws_route_table_association.public[0] will be destroyed
   - resource "aws_route_table_association" "public" {
-      - id             = "rtbassoc-05f7852046811819a" -> null
+      - id             = "rtbassoc-0feb1abbb1678860c" -> null
       - region         = "us-east-1" -> null
-      - route_table_id = "rtb-03428d5d23e2733ca" -> null
-      - subnet_id      = "subnet-04e7cf9492cd42c4d" -> null
+      - route_table_id = "rtb-0d3d7952f3ba2336d" -> null
+      - subnet_id      = "subnet-0ec58d193ab1c43d5" -> null
         # (1 unchanged attribute hidden)
     }
 
   # module.vpc.aws_route_table_association.public[1] will be destroyed
   - resource "aws_route_table_association" "public" {
-      - id             = "rtbassoc-077d4334e5113e079" -> null
+      - id             = "rtbassoc-0683b5a68b37579e3" -> null
       - region         = "us-east-1" -> null
-      - route_table_id = "rtb-03428d5d23e2733ca" -> null
-      - subnet_id      = "subnet-0eb57ea2905213cb7" -> null
+      - route_table_id = "rtb-0d3d7952f3ba2336d" -> null
+      - subnet_id      = "subnet-0b685efe80c449b7e" -> null
         # (1 unchanged attribute hidden)
     }
 
   # module.vpc.aws_subnet.database[0] will be destroyed
   - resource "aws_subnet" "database" {
-      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-0a184f9e4917b857f" -> null
+      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-01f0a954963b71334" -> null
       - assign_ipv6_address_on_creation                = false -> null
       - availability_zone                              = "us-east-1c" -> null
       - availability_zone_id                           = "use1-az1" -> null
@@ -1395,7 +1519,7 @@ Terraform will perform the following actions:
       - enable_lni_at_device_index                     = 0 -> null
       - enable_resource_name_dns_a_record_on_launch    = false -> null
       - enable_resource_name_dns_aaaa_record_on_launch = false -> null
-      - id                                             = "subnet-0a184f9e4917b857f" -> null
+      - id                                             = "subnet-01f0a954963b71334" -> null
       - ipv6_native                                    = false -> null
       - map_customer_owned_ip_on_launch                = false -> null
       - map_public_ip_on_launch                        = false -> null
@@ -1414,13 +1538,13 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                                         = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                                         = "vpc-0c9934474e2d271f6" -> null
         # (4 unchanged attributes hidden)
     }
 
   # module.vpc.aws_subnet.database[1] will be destroyed
   - resource "aws_subnet" "database" {
-      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-079429476386dfe55" -> null
+      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-094c88b5a67bba9e0" -> null
       - assign_ipv6_address_on_creation                = false -> null
       - availability_zone                              = "us-east-1d" -> null
       - availability_zone_id                           = "use1-az2" -> null
@@ -1429,7 +1553,7 @@ Terraform will perform the following actions:
       - enable_lni_at_device_index                     = 0 -> null
       - enable_resource_name_dns_a_record_on_launch    = false -> null
       - enable_resource_name_dns_aaaa_record_on_launch = false -> null
-      - id                                             = "subnet-079429476386dfe55" -> null
+      - id                                             = "subnet-094c88b5a67bba9e0" -> null
       - ipv6_native                                    = false -> null
       - map_customer_owned_ip_on_launch                = false -> null
       - map_public_ip_on_launch                        = false -> null
@@ -1448,13 +1572,13 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                                         = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                                         = "vpc-0c9934474e2d271f6" -> null
         # (4 unchanged attributes hidden)
     }
 
   # module.vpc.aws_subnet.private[0] will be destroyed
   - resource "aws_subnet" "private" {
-      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-0b8ffa00480cda2da" -> null
+      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-02ca124c0a0d38668" -> null
       - assign_ipv6_address_on_creation                = false -> null
       - availability_zone                              = "us-east-1c" -> null
       - availability_zone_id                           = "use1-az1" -> null
@@ -1463,7 +1587,7 @@ Terraform will perform the following actions:
       - enable_lni_at_device_index                     = 0 -> null
       - enable_resource_name_dns_a_record_on_launch    = false -> null
       - enable_resource_name_dns_aaaa_record_on_launch = false -> null
-      - id                                             = "subnet-0b8ffa00480cda2da" -> null
+      - id                                             = "subnet-02ca124c0a0d38668" -> null
       - ipv6_native                                    = false -> null
       - map_customer_owned_ip_on_launch                = false -> null
       - map_public_ip_on_launch                        = false -> null
@@ -1482,13 +1606,13 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                                         = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                                         = "vpc-0c9934474e2d271f6" -> null
         # (4 unchanged attributes hidden)
     }
 
   # module.vpc.aws_subnet.private[1] will be destroyed
   - resource "aws_subnet" "private" {
-      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-0c9e7f849b657e43e" -> null
+      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-0555e4c27a39d69d6" -> null
       - assign_ipv6_address_on_creation                = false -> null
       - availability_zone                              = "us-east-1d" -> null
       - availability_zone_id                           = "use1-az2" -> null
@@ -1497,7 +1621,7 @@ Terraform will perform the following actions:
       - enable_lni_at_device_index                     = 0 -> null
       - enable_resource_name_dns_a_record_on_launch    = false -> null
       - enable_resource_name_dns_aaaa_record_on_launch = false -> null
-      - id                                             = "subnet-0c9e7f849b657e43e" -> null
+      - id                                             = "subnet-0555e4c27a39d69d6" -> null
       - ipv6_native                                    = false -> null
       - map_customer_owned_ip_on_launch                = false -> null
       - map_public_ip_on_launch                        = false -> null
@@ -1516,13 +1640,13 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                                         = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                                         = "vpc-0c9934474e2d271f6" -> null
         # (4 unchanged attributes hidden)
     }
 
   # module.vpc.aws_subnet.public[0] will be destroyed
   - resource "aws_subnet" "public" {
-      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-04e7cf9492cd42c4d" -> null
+      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-0ec58d193ab1c43d5" -> null
       - assign_ipv6_address_on_creation                = false -> null
       - availability_zone                              = "us-east-1c" -> null
       - availability_zone_id                           = "use1-az1" -> null
@@ -1531,7 +1655,7 @@ Terraform will perform the following actions:
       - enable_lni_at_device_index                     = 0 -> null
       - enable_resource_name_dns_a_record_on_launch    = false -> null
       - enable_resource_name_dns_aaaa_record_on_launch = false -> null
-      - id                                             = "subnet-04e7cf9492cd42c4d" -> null
+      - id                                             = "subnet-0ec58d193ab1c43d5" -> null
       - ipv6_native                                    = false -> null
       - map_customer_owned_ip_on_launch                = false -> null
       - map_public_ip_on_launch                        = false -> null
@@ -1550,13 +1674,13 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                                         = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                                         = "vpc-0c9934474e2d271f6" -> null
         # (4 unchanged attributes hidden)
     }
 
   # module.vpc.aws_subnet.public[1] will be destroyed
   - resource "aws_subnet" "public" {
-      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-0eb57ea2905213cb7" -> null
+      - arn                                            = "arn:aws:ec2:us-east-1:683627574821:subnet/subnet-0b685efe80c449b7e" -> null
       - assign_ipv6_address_on_creation                = false -> null
       - availability_zone                              = "us-east-1d" -> null
       - availability_zone_id                           = "use1-az2" -> null
@@ -1565,7 +1689,7 @@ Terraform will perform the following actions:
       - enable_lni_at_device_index                     = 0 -> null
       - enable_resource_name_dns_a_record_on_launch    = false -> null
       - enable_resource_name_dns_aaaa_record_on_launch = false -> null
-      - id                                             = "subnet-0eb57ea2905213cb7" -> null
+      - id                                             = "subnet-0b685efe80c449b7e" -> null
       - ipv6_native                                    = false -> null
       - map_customer_owned_ip_on_launch                = false -> null
       - map_public_ip_on_launch                        = false -> null
@@ -1584,26 +1708,26 @@ Terraform will perform the following actions:
           - "environment" = "stag"
           - "owners"      = "HR"
         } -> null
-      - vpc_id                                         = "vpc-0e324e8debeb93925" -> null
+      - vpc_id                                         = "vpc-0c9934474e2d271f6" -> null
         # (4 unchanged attributes hidden)
     }
 
   # module.vpc.aws_vpc.this[0] will be destroyed
   - resource "aws_vpc" "this" {
-      - arn                                  = "arn:aws:ec2:us-east-1:683627574821:vpc/vpc-0e324e8debeb93925" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:683627574821:vpc/vpc-0c9934474e2d271f6" -> null
       - assign_generated_ipv6_cidr_block     = false -> null
       - cidr_block                           = "10.0.0.0/16" -> null
-      - default_network_acl_id               = "acl-0ee6b22198c648da8" -> null
-      - default_route_table_id               = "rtb-08744faf269e98f9b" -> null
-      - default_security_group_id            = "sg-08fdfc1b98a20cad4" -> null
+      - default_network_acl_id               = "acl-0db4216b5872a1a57" -> null
+      - default_route_table_id               = "rtb-0630061c2c227224c" -> null
+      - default_security_group_id            = "sg-0b97fd98fb9755c1a" -> null
       - dhcp_options_id                      = "dopt-04b04201693911d76" -> null
       - enable_dns_hostnames                 = true -> null
       - enable_dns_support                   = true -> null
       - enable_network_address_usage_metrics = false -> null
-      - id                                   = "vpc-0e324e8debeb93925" -> null
+      - id                                   = "vpc-0c9934474e2d271f6" -> null
       - instance_tenancy                     = "default" -> null
       - ipv6_netmask_length                  = 0 -> null
-      - main_route_table_id                  = "rtb-08744faf269e98f9b" -> null
+      - main_route_table_id                  = "rtb-0630061c2c227224c" -> null
       - owner_id                             = "683627574821" -> null
       - region                               = "us-east-1" -> null
       - tags                                 = {
@@ -1619,42 +1743,134 @@ Terraform will perform the following actions:
         # (4 unchanged attributes hidden)
     }
 
-Plan: 0 to add, 0 to change, 46 to destroy.
+  # module.elb.module.elb.aws_elb.this[0] will be destroyed
+  - resource "aws_elb" "this" {
+      - arn                         = "arn:aws:elasticloadbalancing:us-east-1:683627574821:loadbalancer/HR-stag-myelb" -> null
+      - availability_zones          = [
+          - "us-east-1c",
+          - "us-east-1d",
+        ] -> null
+      - connection_draining         = false -> null
+      - connection_draining_timeout = 300 -> null
+      - cross_zone_load_balancing   = true -> null
+      - desync_mitigation_mode      = "defensive" -> null
+      - dns_name                    = "HR-stag-myelb-1944164650.us-east-1.elb.amazonaws.com" -> null
+      - id                          = "HR-stag-myelb" -> null
+      - idle_timeout                = 60 -> null
+      - instances                   = [
+          - "i-0765c6a03504cc0fd",
+          - "i-0ae7cdc69d75939c8",
+        ] -> null
+      - internal                    = false -> null
+      - name                        = "HR-stag-myelb" -> null
+      - region                      = "us-east-1" -> null
+      - security_groups             = [
+          - "sg-0d34779acf68a15e0",
+        ] -> null
+      - source_security_group       = "683627574821/loadbalancer-sg-20250828232516895100000003" -> null
+      - source_security_group_id    = "sg-0d34779acf68a15e0" -> null
+      - subnets                     = [
+          - "subnet-0b685efe80c449b7e",
+          - "subnet-0ec58d193ab1c43d5",
+        ] -> null
+      - tags                        = {
+          - "Name"        = "HR-stag-myelb"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - tags_all                    = {
+          - "Name"        = "HR-stag-myelb"
+          - "environment" = "stag"
+          - "owners"      = "HR"
+        } -> null
+      - zone_id                     = "Z35SXDOTRQ7X7K" -> null
+        # (1 unchanged attribute hidden)
+
+      - health_check {
+          - healthy_threshold   = 2 -> null
+          - interval            = 30 -> null
+          - target              = "HTTP:80/" -> null
+          - timeout             = 5 -> null
+          - unhealthy_threshold = 2 -> null
+        }
+
+      - listener {
+          - instance_port      = 80 -> null
+          - instance_protocol  = "http" -> null
+          - lb_port            = 80 -> null
+          - lb_protocol        = "http" -> null
+            # (1 unchanged attribute hidden)
+        }
+      - listener {
+          - instance_port      = 80 -> null
+          - instance_protocol  = "http" -> null
+          - lb_port            = 81 -> null
+          - lb_protocol        = "http" -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # module.elb.module.elb_attachment.aws_elb_attachment.this[0] will be destroyed
+  - resource "aws_elb_attachment" "this" {
+      - elb      = "HR-stag-myelb" -> null
+      - id       = "HR-stag-myelb-2025082823273370740000000e" -> null
+      - instance = "i-0ae7cdc69d75939c8" -> null
+      - region   = "us-east-1" -> null
+    }
+
+  # module.elb.module.elb_attachment.aws_elb_attachment.this[1] will be destroyed
+  - resource "aws_elb_attachment" "this" {
+      - elb      = "HR-stag-myelb" -> null
+      - id       = "HR-stag-myelb-2025082823273370790000000f" -> null
+      - instance = "i-0765c6a03504cc0fd" -> null
+      - region   = "us-east-1" -> null
+    }
+
+Plan: 0 to add, 0 to change, 53 to destroy.
 
 Changes to Outputs:
   - azs                             = [
       - "us-east-1c",
       - "us-east-1d",
     ] -> null
-  - ec2_bastion_public_instance_ids = "i-07610e116eef43249" -> null
-  - ec2_bastion_public_ip           = "54.87.7.66" -> null
+  - ec2_bastion_public_instance_ids = "i-0d21e4f9c56937afa" -> null
+  - ec2_bastion_public_ip           = "3.92.151.108" -> null
   - ec2_private_instance_ids        = [
-      - "i-00dc78dc72102bed7",
-      - "i-08b2e9dd83b27080f",
+      - "i-0ae7cdc69d75939c8",
+      - "i-0765c6a03504cc0fd",
     ] -> null
   - ec2_private_ip                  = [
-      - "10.0.1.157",
-      - "10.0.2.97",
+      - "10.0.1.91",
+      - "10.0.2.43",
     ] -> null
+  - elb_dns_name                    = "HR-stag-myelb-1944164650.us-east-1.elb.amazonaws.com" -> null
+  - elb_id                          = "HR-stag-myelb" -> null
+  - elb_instances                   = [
+      - "i-0765c6a03504cc0fd",
+      - "i-0ae7cdc69d75939c8",
+    ] -> null
+  - elb_name                        = "HR-stag-myelb" -> null
+  - elb_source_security_group_id    = "sg-0d34779acf68a15e0" -> null
+  - elb_zone_id                     = "Z35SXDOTRQ7X7K" -> null
   - nat_public_ips                  = [
-      - "54.243.99.84",
+      - "204.236.237.248",
     ] -> null
-  - private_sg_group_id             = "sg-004831a0a97b04d73" -> null
-  - private_sg_group_name           = "private-sg-20250828212310895300000001" -> null
-  - private_sg_group_vpc_id         = "vpc-0e324e8debeb93925" -> null
+  - private_sg_group_id             = "sg-0ffa1f1f8a76fb1fc" -> null
+  - private_sg_group_name           = "private-sg-20250828232517234700000006" -> null
+  - private_sg_group_vpc_id         = "vpc-0c9934474e2d271f6" -> null
   - private_subnets                 = [
-      - "subnet-0b8ffa00480cda2da",
-      - "subnet-0c9e7f849b657e43e",
+      - "subnet-02ca124c0a0d38668",
+      - "subnet-0555e4c27a39d69d6",
     ] -> null
-  - public_bastion_sg_group_id      = "sg-045700c7e27761559" -> null
-  - public_bastion_sg_group_name    = "public-bastion-sg-20250828212313802600000005" -> null
-  - public_bastion_sg_group_vpc_id  = "vpc-0e324e8debeb93925" -> null
+  - public_bastion_sg_group_id      = "sg-0986a9094ad77c9ab" -> null
+  - public_bastion_sg_group_name    = "public-bastion-sg-20250828232517207800000005" -> null
+  - public_bastion_sg_group_vpc_id  = "vpc-0c9934474e2d271f6" -> null
   - public_subnets                  = [
-      - "subnet-04e7cf9492cd42c4d",
-      - "subnet-0eb57ea2905213cb7",
+      - "subnet-0ec58d193ab1c43d5",
+      - "subnet-0b685efe80c449b7e",
     ] -> null
   - vpc_cidr_block                  = "10.0.0.0/16" -> null
-  - vpc_id                          = "vpc-0e324e8debeb93925" -> null
+  - vpc_id                          = "vpc-0c9934474e2d271f6" -> null
 
 ─────────────────────────────────────────────────────────────────────────────
 
